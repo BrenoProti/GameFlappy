@@ -23,6 +23,12 @@ public class GameController : MonoBehaviour
 
     //canvas points var
     [SerializeField] private Text txtPoints;
+    //canvas level var
+    [SerializeField] private Text txtLevel;
+
+    //Levels
+    private int level = 1;
+    [SerializeField] private float nextLevel = 10;
 
     void Start()
     {
@@ -32,8 +38,21 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        txtLevel.text = level.ToString();
         Points();
         CreateObstacle();
+        LevelUp();
+    }
+
+    private void LevelUp() 
+    {
+        if (points >= nextLevel) 
+        {
+            level++;
+            nextLevel = nextLevel*2;
+            Debug.Log(level);
+            Debug.Log(nextLevel);
+        }
     }
 
     private void Points()
