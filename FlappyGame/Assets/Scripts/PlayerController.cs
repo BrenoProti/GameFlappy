@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
         //limiting the speed of fall
         LimitingVelocity();
+
+        //Restarting the game if players leaves the room
+        gameRestart();
     }
 
     //Method to limit the speed of fall
@@ -45,5 +48,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SceneManager.LoadScene(0);
+    }
+
+    private void gameRestart()
+    {
+        if((transform.position.y >= 6f) || (transform.position.y <= -5.5f))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

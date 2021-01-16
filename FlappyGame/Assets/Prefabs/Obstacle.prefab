@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 1
-  actualObstacle: {fileID: 0}
+  actualObstacle: {fileID: 2453489811645078024}
   game: {fileID: 0}
 --- !u!1 &2453489812274023571
 GameObject:
