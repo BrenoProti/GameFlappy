@@ -30,9 +30,12 @@ public class GameController : MonoBehaviour
     private int level = 1;
     [SerializeField] private float nextLevel = 8;
 
+    // SOund
+    [SerializeField] private AudioClip lvlUp;
+
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -48,6 +51,7 @@ public class GameController : MonoBehaviour
     {
         if (points >= nextLevel) 
         {
+            AudioSource.PlayClipAtPoint(lvlUp, transform.position);
             level++;
             nextLevel = nextLevel*2;
             Debug.Log(level);

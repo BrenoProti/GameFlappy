@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D myRB;
     // speed of fly
     [SerializeField] private float velocity = 5f;
+
+    [SerializeField] private GameObject poof;
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
@@ -41,6 +43,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             myRB.velocity = Vector2.up * velocity;
+            GameObject myPoof = Instantiate(poof, transform.position, Quaternion.identity);
+
+            Destroy(myPoof, 2f);
         }
     }
 
