@@ -69,7 +69,7 @@ public class GameController : MonoBehaviour
             position.y = Random.Range(posMin, posMax);
 
             Instantiate(myObstacle, position, Quaternion.identity);
-            timer = Random.Range(1f/level, 2f/(level-1));
+            timer = Random.Range(1f/level, 1.5f);
         }
     }
 
