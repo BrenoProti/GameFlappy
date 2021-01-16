@@ -6,9 +6,11 @@ public class ObstacleController : MonoBehaviour
 {
 
     [SerializeField] private float velocity = 5f;
+
+    [SerializeField] private GameObject actualObstacle;
     void Start()
     {
-        
+        Destroy(actualObstacle, 5f);
     }
 
     // Update is called once per frame

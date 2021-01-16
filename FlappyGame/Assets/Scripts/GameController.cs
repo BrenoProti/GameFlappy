@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     // Position to create obstacle
     [SerializeField] private Vector3 position;
+
+    //Min and Max position in y to create obstacle
+    [SerializeField] private float posMin = -1.8f;
+    [SerializeField] private float posMax = 0.78f;
     void Start()
     {
         
@@ -23,8 +27,10 @@ public class GameController : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer < 0)
         {
+            position.y = Random.Range(posMin, posMax);
+
             Instantiate(myObstacle, position, Quaternion.identity);
-            timer = 1f;
+            timer = Random.Range(1f, 2f);
         }
     }
 }
