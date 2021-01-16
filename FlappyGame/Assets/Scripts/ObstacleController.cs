@@ -5,12 +5,17 @@ using UnityEngine;
 public class ObstacleController : MonoBehaviour
 {
 
-    [SerializeField] private float velocity = 5f;
+    [SerializeField] private float velocity = 4f;
 
     [SerializeField] private GameObject actualObstacle;
+
+    // Game Controller Var
+    [SerializeField] private GameController game;
     void Start()
     {
         Destroy(actualObstacle, 5f);
+
+        game = FindObjectOfType<GameController>();
     }
 
     // Update is called once per frame
@@ -18,5 +23,8 @@ public class ObstacleController : MonoBehaviour
     {
         //move to left
         transform.position += Vector3.left * (Time.deltaTime * velocity);
+        velocity = 4f + game.ReturnLevel();
+
+
     }
 }

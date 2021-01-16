@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
     //Levels
     private int level = 1;
-    [SerializeField] private float nextLevel = 10;
+    [SerializeField] private float nextLevel = 8;
 
     void Start()
     {
@@ -69,7 +69,12 @@ public class GameController : MonoBehaviour
             position.y = Random.Range(posMin, posMax);
 
             Instantiate(myObstacle, position, Quaternion.identity);
-            timer = Random.Range(1f, 2f);
+            timer = Random.Range(1f/level, 2f/(level-1));
         }
+    }
+
+    public int ReturnLevel()
+    {
+        return level;
     }
 }

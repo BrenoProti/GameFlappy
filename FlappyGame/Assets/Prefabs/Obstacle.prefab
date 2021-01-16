@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7891f3440c4269c408f20170bbdb7eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 5
-  actualObstacle: {fileID: 2453489811645078024}
+  velocity: 1
+  actualObstacle: {fileID: 0}
+  game: {fileID: 0}
 --- !u!1 &2453489812274023571
 GameObject:
   m_ObjectHideFlags: 0

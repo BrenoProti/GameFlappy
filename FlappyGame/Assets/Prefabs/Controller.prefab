@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2732007267014785208}
+  - component: {fileID: 797421963}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30,3 +31,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &797421963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8758480719201004842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f636d10e5fb0484083bfe2489267e33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 1
+  myObstacle: {fileID: 2453489811645078024, guid: b81088261eb2961489ec714c40751527,
+    type: 3}
+  position: {x: 12, y: 0, z: 0}
+  posMin: -1.8
+  posMax: 0.78
+  txtPoints: {fileID: 0}
+  txtLevel: {fileID: 0}
+  nextLevel: 10
